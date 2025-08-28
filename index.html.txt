@@ -2,10 +2,133 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Mon site rapide</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Motivation TSSR - Greta</title>
+  <style>
+    /* Reset et base */
+    * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f0f2f5; color: #333; line-height: 1.6; }
+
+    /* Menu fixe */
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: #4CAF50;
+      color: white;
+      padding: 15px 0;
+      z-index: 1000;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    nav { text-align: center; }
+    nav a {
+      margin: 0 20px;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    nav a:hover { text-decoration: underline; }
+
+    /* Hero section */
+    .hero {
+      padding-top: 120px; /* pour le menu fixe */
+      text-align: center;
+      background: linear-gradient(120deg, #4CAF50, #81C784);
+      color: white;
+      padding-bottom: 60px;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 15px;
+      animation: slideDown 1s ease;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      animation: fadeIn 2s ease;
+    }
+
+    /* Animations simples */
+    @keyframes slideDown {
+      0% { opacity: 0; transform: translateY(-50px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    /* Sections */
+    section {
+      padding: 80px 20px;
+      max-width: 900px;
+      margin: 40px auto;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    section h2 { color: #4CAF50; margin-bottom: 20px; }
+    section p { font-size: 1.1rem; margin-bottom: 20px; }
+
+    /* Boutons */
+    .btn {
+      display: inline-block;
+      background: #4CAF50;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .btn:hover { background: #3e8e41; }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #333;
+      color: white;
+      margin-top: 40px;
+    }
+  </style>
 </head>
 <body>
-  <h1>Bienvenue sur mon site 🚀</h1>
-  <p>Ce site est hébergé sur GitHub Pages.</p>
+
+  <header>
+    <nav>
+      <a href="#about">À propos</a>
+      <a href="#motivation">Motivation</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Bienvenue sur mon site 🚀</h1>
+    <p>Créé pour le Greta pour montrer ma motivation à intégrer la formation TSSR</p>
+  </section>
+
+  <section id="about">
+    <h2>À propos</h2>
+    <p>Bonjour ! Je souhaite intégrer la formation <strong>TSSR</strong> du Greta. Ce site est un exemple concret de ma motivation et de ma capacité à créer un site web simple mais fonctionnel.</p>
+  </section>
+
+  <section id="motivation">
+    <h2>Ma motivation</h2>
+    <p>En réalisant ce site, je démontre mon intérêt pour le développement web et mon sérieux dans mon projet de formation. Je suis prêt à apprendre et à m’investir pleinement dans le programme TSSR.</p>
+    <a href="#contact" class="btn">Me contacter</a>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Pour me contacter : <strong>exemple@email.com</strong></p>
+    <a href="mailto:exemple@email.com" class="btn">Envoyer un email</a>
+  </section>
+
+  <footer>
+    &copy; 2025 - Site réalisé pour le Greta
+  </footer>
+
 </body>
 </html>
